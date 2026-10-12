@@ -1,0 +1,6 @@
+{
+  "name": "CMM Transparência - Observatório Econômico dos Gabinetes",
+  "description": "Plataforma de transparência fiscal e análise econômica dos gabinetes dos 41 vereadores eleitos da Câmara Municipal de Manaus (CMM).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
