@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CMM Transparência - Observatório Econômico dos Gabinetes</title>
+    <script>
+      // Single Page App redirect for GitHub Pages routing fallback
+      var segmentCount = 0;
+      var l = window.location;
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        l.pathname.split('/').slice(0, 1 + segmentCount).join('/') + '/?p=/' +
+        l.pathname.slice(1).split('/').slice(segmentCount).join('/').replace(/&/g, '~and~') +
+        (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
+    </script>
+  </head>
+  <body style="font-family: system-ui, -apple-system, sans-serif; padding: 2rem; text-align: center; color: #334155;">
+    <h2>Redirecionando para CMM Transparência...</h2>
+    <p><a href="./" style="color: #047857; font-weight: bold;">Clique aqui se você não for redirecionado automaticamente</a></p>
+  </body>
+</html>
