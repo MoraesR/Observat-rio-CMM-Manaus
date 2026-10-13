@@ -9,7 +9,7 @@ import { CouncilorModal } from './components/CouncilorModal';
 import { ComparisonTool } from './components/ComparisonTool';
 import { AnalyticsCharts } from './components/AnalyticsCharts';
 import { MethodologyView } from './components/MethodologyView';
-import { AiAuditModal } from './components/AiAuditModal';
+import { FiscalAuditModal } from './components/FiscalAuditModal';
 import { ExportModal } from './components/ExportModal';
 import { SyncStatusModal } from './components/SyncStatusModal';
 import { NetworkGraphView } from './components/NetworkGraphView';
@@ -181,9 +181,9 @@ export default function App() {
         />
       )}
 
-      {/* AI Fiscal Audit Modal */}
+      {/* Fiscal Audit Modal (100% Local & Zero External Cost) */}
       {isAuditOpen && (
-        <AiAuditModal
+        <FiscalAuditModal
           vereadores={activeVereadores}
           onClose={() => setIsAuditOpen(false)}
           onSelectCouncilor={(v) => setSelectedCouncilor(v)}

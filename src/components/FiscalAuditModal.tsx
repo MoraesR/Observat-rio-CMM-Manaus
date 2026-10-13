@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { Vereador } from '../types';
-import { X, ShieldCheck, Sparkles, AlertTriangle, CheckCircle2, Copy, Check, FileText } from 'lucide-react';
+import { X, ShieldCheck, AlertTriangle, CheckCircle2, Copy, Check, FileText } from 'lucide-react';
 
-interface AiAuditModalProps {
+interface FiscalAuditModalProps {
   vereadores: Vereador[];
   onClose: () => void;
   onSelectCouncilor: (vereador: Vereador) => void;
 }
 
-export const AiAuditModal: React.FC<AiAuditModalProps> = ({
+export const FiscalAuditModal: React.FC<FiscalAuditModalProps> = ({
   vereadores,
   onClose,
   onSelectCouncilor,
@@ -24,7 +24,7 @@ export const AiAuditModal: React.FC<AiAuditModalProps> = ({
   };
 
   const copyReport = () => {
-    const text = `RELATÓRIO DE AUDITORIA CÍVICA - CMM TRANSPARÊNCIA
+    const text = `RELATÓRIO DE AUDITORIA FISCAL CÍVICA (100% PROCESSAMENTO LOCAL) - CMM TRANSPARÊNCIA
 Vereador: ${selected.nomeParlamentar} (${selected.partido})
 Gabinete: ${selected.gabinete.numeroSala} - CMM
 Votos na Eleição 2024: ${selected.votos.toLocaleString('pt-BR')}
@@ -39,10 +39,11 @@ ${!dadosEconomicos.exerciaMandatoNaCMM ? `NOTA DE AUDITORIA:
 - Fornecedor Dominante: ${dadosEconomicos.auditoria.fornecedorDominante?.nome} (${dadosEconomicos.auditoria.fornecedorDominante?.percentualDoTotal}% da cota)
 - Quadro de Pessoal: ${selected.gabinete.totalAssessoresAtivos} assessores | Folha mensal: ${formatBRL(dadosEconomicos.gastoFolhaAssessoresMes)}
 
-APONTAMENTOS DE AUDITORIA:
+APONTAMENTOS DE AUDITORIA ALGORÍTMICA:
 ${dadosEconomicos.auditoria.alertas.map(a => `- [${a.tipo.toUpperCase()}] ${a.titulo}: ${a.descricao}`).join('\n')}`}
 
-Fonte: Observatório Cívico CMM Transparência / Portal da Transparência da CMM`;
+Fonte: Observatório Cívico CMM Transparência / Portal da Transparência da CMM
+Método: Auditoria algorítmica local baseada em regras tributárias e parâmetros de controle social (Sem custo de APIs externas)`;
 
     navigator.clipboard.writeText(text);
     setCopied(true);
@@ -60,8 +61,13 @@ Fonte: Observatório Cívico CMM Transparência / Portal da Transparência da CM
               <ShieldCheck className="w-5 h-5" />
             </div>
             <div>
-              <h2 className="text-lg font-bold text-white">Auditoria Fiscal Automatizada</h2>
-              <p className="text-xs text-slate-400">Inspeção algorítmica de prestação de contas dos gabinetes da CMM</p>
+              <div className="flex items-center gap-2">
+                <h2 className="text-lg font-bold text-white">Auditoria Fiscal Cívica</h2>
+                <span className="text-[10px] font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-2 py-0.5 rounded-full">
+                  100% Local · Sem Custo de API
+                </span>
+              </div>
+              <p className="text-xs text-slate-400">Inspeção algorítmica e análise estatística de prestação de contas dos gabinetes da CMM</p>
             </div>
           </div>
           <button
@@ -186,7 +192,7 @@ Fonte: Observatório Cívico CMM Transparência / Portal da Transparência da CM
 
           {/* Detailed Findings List */}
           <div className="space-y-2.5">
-            <h3 className="font-bold text-slate-900 text-xs">Apontamentos Auditados</h3>
+            <h3 className="font-bold text-slate-900 text-xs">Apontamentos Auditados (Regras de Conformidade TCE-AM)</h3>
             {dadosEconomicos.auditoria.alertas.map((alerta, i) => (
               <div
                 key={i}

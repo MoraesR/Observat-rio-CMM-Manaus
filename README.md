@@ -4,9 +4,10 @@ Plataforma de auditoria cívica, visualização e análise de dados econômicos 
 
 ---
 
-## ⚡ Arquitetura 100% Estática (Sem Dependências Externas)
+## ⚡ Arquitetura 100% Estática (Custo Zero e Sem Dependências Externas)
 
-O portal foi projetado para operar de forma **completamente autônoma e estática**:
+O portal foi projetado para operar de forma **completamente autônoma, estática e sem custos recorrentes**:
+- **Zero API de IA / LLM (Custo Zero)**: Toda a auditoria fiscal, detecção de anomalias, índices de risco e conformidade do TCE-AM rodam via algoritmos locais em JavaScript no navegador. Não há chamadas para OpenAI, Gemini ou LLMs pagos.
 - **Zero backend**: Não requer servidor Node/Express, banco de dados ou APIs pagas para funcionar.
 - **Offline-ready**: Todos os dados contábeis, notas fiscais, emendas parlamentares, quadro de pessoal comissionado e grafo de fornecedores estão embutidos no cliente web.
 - **Relatórios & Exportações locais**: A geração de CSVs e relatórios de auditoria roda inteiramente no navegador via Blob API sem tráfego de rede para terceiros.
