@@ -7,42 +7,14 @@ Plataforma de auditoria cívica, visualização e análise de dados econômicos 
 ## ⚡ Arquitetura 100% Estática (Custo Zero e Sem Dependências Externas)
 
 O portal foi projetado para operar de forma **completamente autônoma, estática e sem custos recorrentes**:
-- **Zero API de IA / LLM (Custo Zero)**: Toda a auditoria fiscal, detecção de anomalias, índices de risco e conformidade do TCE-AM rodam via algoritmos locais em JavaScript no navegador. Não há chamadas para OpenAI, Gemini ou LLMs pagos.
-- **Zero backend**: Não requer servidor Node/Express, banco de dados ou APIs pagas para funcionar.
+Toda a auditoria fiscal, detecção de anomalias, índices de risco e conformidade do TCE-AM rodam via algoritmos locais em JavaScript no navegador. 
 - **Offline-ready**: Todos os dados contábeis, notas fiscais, emendas parlamentares, quadro de pessoal comissionado e grafo de fornecedores estão embutidos no cliente web.
 - **Relatórios & Exportações locais**: A geração de CSVs e relatórios de auditoria roda inteiramente no navegador via Blob API sem tráfego de rede para terceiros.
 - **Compatibilidade total**: Utiliza caminhos de assets relativos (`base: './'`), permitindo hospedar em qualquer subdiretório do GitHub Pages (`https://<usuario>.github.io/<repositorio>/`) ou em domínio personalizado.
 
 ---
 
-## 🚀 Como Fazer o Deploy no GitHub Pages
 
-Você tem **duas formas simples** de publicar no GitHub Pages:
-
-### Opção 1: Automático via GitHub Actions (Recomendado)
-Já deixamos configurado o arquivo `.github/workflows/deploy.yml`.
-
-1. Suba o código para o seu repositório no GitHub:
-   ```bash
-   git add .
-   git commit -m "Deploy CMM Transparência"
-   git push origin main
-   ```
-2. No seu repositório no GitHub, vá em **Settings** > **Pages**.
-3. Em **Build and deployment** > **Source**, selecione **GitHub Actions**.
-4. Pronto! O workflow compilará e publicará a aplicação automaticamente a cada `git push`.
-
----
-
-### Opção 2: Deploy Manual via Linha de Comando (`gh-pages`)
-Se preferir publicar diretamente pela sua máquina:
-
-1. Instale e gere a compilação:
-   ```bash
-   npm run deploy
-   ```
-   *(Este comando executa automaticamente `npm run build` e envia a pasta `dist` para o branch `gh-pages`)*
-2. Em **Settings** > **Pages** no GitHub, confirme se o branch está definido como `gh-pages` / `/ (root)`.
 
 ---
 
