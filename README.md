@@ -10,7 +10,7 @@ O portal foi projetado para operar de forma **completamente autônoma, estática
 Toda a auditoria fiscal, detecção de anomalias, índices de risco e conformidade do TCE-AM rodam via algoritmos locais em JavaScript no navegador. 
 - **Offline-ready**: Todos os dados contábeis, notas fiscais, emendas parlamentares, quadro de pessoal comissionado e grafo de fornecedores estão embutidos no cliente web.
 - **Relatórios & Exportações locais**: A geração de CSVs e relatórios de auditoria roda inteiramente no navegador via Blob API sem tráfego de rede para terceiros.
-- **Compatibilidade total**: Utiliza caminhos de assets relativos (`base: './'`), permitindo hospedar em qualquer subdiretório do GitHub Pages (`https://<usuario>.github.io/<repositorio>/`) ou em domínio personalizado.
+
 
 ---
 ### Pré-requisitos
