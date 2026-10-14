@@ -4,7 +4,7 @@ Plataforma de auditoria cívica, visualização e análise de dados econômicos 
 
 ---
 
-## ⚡ Arquitetura 100% Estática (Custo Zero e Sem Dependências Externas)
+##  Arquitetura Estática 
 
 O portal foi projetado para operar de forma **completamente autônoma, estática e sem custos recorrentes**:
 Toda a auditoria fiscal, detecção de anomalias, índices de risco e conformidade do TCE-AM rodam via algoritmos locais em JavaScript no navegador. 
@@ -13,7 +13,25 @@ Toda a auditoria fiscal, detecção de anomalias, índices de risco e conformida
 - **Compatibilidade total**: Utiliza caminhos de assets relativos (`base: './'`), permitindo hospedar em qualquer subdiretório do GitHub Pages (`https://<usuario>.github.io/<repositorio>/`) ou em domínio personalizado.
 
 ---
+### Pré-requisitos
+- **Bun** instalado (localizado em `C:\Users\Rodrigo\.bun\bin\bun.exe`).
 
+### Comandos de Execução
+Abrir o terminal na pasta do projeto (`D:\05_Dev\Observat-rio-CMM-Manaus-main`):
+
+```powershell
+# 1. Instalar dependências
+bun install
+
+# 2. Iniciar servidor de desenvolvimento (Porta 3000)
+bun dev
+
+# 3. Compilar para produção (gera pasta dist/)
+bun run build
+
+# 4. Pré-visualizar build local de produção
+bun run preview
+```
 
 
 ---
