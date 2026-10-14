@@ -14,10 +14,10 @@ Toda a auditoria fiscal, detecção de anomalias, índices de risco e conformida
 
 ---
 ### Pré-requisitos
-- **Bun** instalado (localizado em `C:\Users\Rodrigo\.bun\bin\bun.exe`).
+- **Bun** instalado 
 
 ### Comandos de Execução
-Abrir o terminal na pasta do projeto (`D:\05_Dev\Observat-rio-CMM-Manaus-main`):
+Abrir o terminal na pasta do projeto 
 
 ```powershell
 # 1. Instalar dependências
