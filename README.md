@@ -1,4 +1,4 @@
-# CMM Transparência - Observatório Econômico dos Gabinetes (100% Estático)
+# CMM Transparência - Observatório Econômico dos Gabinetes 
 
 Plataforma de auditoria cívica, visualização e análise de dados econômicos dos **41 vereadores da Câmara Municipal de Manaus (CMM)**.
 
